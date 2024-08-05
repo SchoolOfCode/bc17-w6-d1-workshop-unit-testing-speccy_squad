@@ -14,23 +14,23 @@ This workshop is all about unit testing! Here's a glimpse of what you'll be achi
 
 Time to dive into action! 🏊‍♂️ Here's what you'll be working on:
 
-### 🎫 Ticket 1 - Installing Vitest
+### 🎫 Ticket 1 - Installing Vitest✅
 
 Your manager wants you to install and set up Vitest in the `proof-of-concept` project so the team can start writing automated tests. There are no other details provided and your manager is currently unavailable to ask questions. You and your team need to figure things out on your own for now.
 
 Below is how you've started to break the problem down so far:
 
-- `cd` into the `proof-of-concept` project
-  - Why: If you don't `cd` into the subfolder first, then by default you'll install NPM packages to your current working directory, which probably isn't the right place.
-- Install Vitest as a dev dependency
+- `cd` into the `proof-of-concept` project✅
+  - Why: If you don't `cd` into the subfolder first, then by default you'll install NPM packages to your current working directory, which probably isn't the right place.✅
+- Install Vitest as a dev dependency✅
 
-  - Vitest is a third party package to help write tests. Since it's only needed during development/testing, install it as a dev dependency (rather than a regular dependency).
-  - If you're stuck on how to install it, search online for their documentation and try to find a "getting started" guide.
+  - Vitest is a third party package to help write tests. Since it's only needed during development/testing, install it as a dev dependency (rather than a regular dependency).✅
+  - If you're stuck on how to install it, search online for their documentation and try to find a "getting started" guide.✅
 
-- After installing Vitest, check if you can run it.
+- After installing Vitest, check if you can run it.✅
 
-  - Why: Running Vitest, even without tests written yet, verifies that it is installed correctly and ready for you to start writing actual tests. Since you don't currently have any tests, you'd expect at this stage for the terminal to display something like "no tests found" or anything else that lets you know that Vitest ran.
-  - If you're stuck on how to run/execute Vitest, search online for their documentation.
+  - Why: Running Vitest, even without tests written yet, verifies that it is installed correctly and ready for you to start writing actual tests. Since you don't currently have any tests, you'd expect at this stage for the terminal to display something like "no tests found" or anything else that lets you know that Vitest ran.✅
+  - If you're stuck on how to run/execute Vitest, search online for their documentation.✅
 
 ### 🎫 Ticket 2 - Writing a basic test skeleton
 
