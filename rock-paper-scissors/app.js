@@ -30,22 +30,16 @@ export const LOSS = "loss";
  * If either of the human move or computer move is unsupported/invalid, then an error should be thrown.
  */
 export function calculateRoundResult(playerMove, computerMove) {
-  if (ROCK === playerMove && ROCK === computerMove) {
+  if (playerMove === ROCK && computerMove === ROCK) {
     return { outcome: DRAW, message: "Both players chose rock. It's a draw." };
   }
-  if (playerMove === "rock" && computerMove === "rock") {
-    return {
-      outcome: DRAW,
-      message: "Player chose rock and computer chose paper. Computer wins.",
-    };
-  }
-  if (playerMove === "ROCK" && computerMove === SCISSORS) {
+  if (playerMove === ROCK && computerMove === SCISSORS) {
     return {
       outcome: WIN,
       message: "Player chose rock and computer chose paper. Player wins.",
     };
   }
-  if ((playerMove = PAPER && computerMove === ROCK)) {
+  if (playerMove === PAPER && computerMove === ROCK) {
     return {
       outcome: WIN,
       message: "Player chose paper and computer chose rock. Player wins.",

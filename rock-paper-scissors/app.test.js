@@ -1,6 +1,7 @@
 import { expect } from "vitest";
 import { test } from "vitest";
 import { calculateRoundResult, DRAW, WIN, LOSS, ROCK, PAPER, SCISSORS } from "./app.js";
+const APPLE = "APPLE"
 
 // - `calculateRoundResult` - you should have a test for each permutation of valid inputs and assert that it returns the correct value
 // - `calculateRoundResult` - you should have a few tests for a few invalid inputs too and assert that it throws an error with the correct message
@@ -14,9 +15,15 @@ test("If computer move and player move = rock, return draw", () => {
   });
 });
 
-test("If computer move = 'scissors' and player move = 'paper', return Computer wins", () => {
-  expect(calculateRoundResult(PAPER, SCISSORS)).toEqual({
-      outcome: LOSS,
-      message: "Player chose paper and computer chose scissors. Computer wins."
+test("If computer move = 'ROCK' and player move = 'PAPER', return Player wins", () => {
+  expect(calculateRoundResult(PAPER, ROCK)).toEqual({
+    outcome: WIN,
+    message: "Player chose paper and computer chose rock. Player wins.",
   });
+});
+
+test("If an invalid move is given, error should appear", () => {
+  expect(() => calculateRoundResult(APPLE, ROCK)).toThrowError(
+    "Invalid player move (APPLE) or computer move ROCK"
+  );
 });
