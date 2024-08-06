@@ -1,9 +1,9 @@
 export const ROCK = "rock";
 export const PAPER = "paper";
-const SCISSORS = "scissors";
-export const DRAW = "draw",
-  WIN = "win",
-  LOSS = "loss";
+export const SCISSORS = "scissors";
+export const DRAW = "draw";
+export const  WIN = "win";
+export const LOSS = "loss";
 
 /**
  * The 'calculateRoundResult' function takes in the playerMove and computerMove as its arguments. Both playerMove and computerMove will respectively be either: 'rock', 'paper', or 'scissors'.
@@ -33,7 +33,7 @@ export function calculateRoundResult(playerMove, computerMove) {
   if (ROCK === playerMove && ROCK === computerMove) {
     return { outcome: DRAW, message: "Both players chose rock. It's a draw." };
   }
-  if (playerMove === "rock" && computerMove === "") {
+  if (playerMove === "rock" && computerMove === "rock") {
     return {
       outcome: DRAW,
       message: "Player chose rock and computer chose paper. Computer wins.",
@@ -45,31 +45,31 @@ export function calculateRoundResult(playerMove, computerMove) {
       message: "Player chose rock and computer chose paper. Player wins.",
     };
   }
-  if ((playerMove = PAPER && computerMove === "rrock")) {
+  if ((playerMove = PAPER && computerMove === ROCK)) {
     return {
       outcome: WIN,
       message: "Player chose paper and computer chose rock. Player wins.",
     };
   }
-  if (PAPER === playerMove && SCISSORS) {
+  if (playerMove === SCISSORS && computerMove === SCISSORS) { //(PAPER === playerMove && SCISSORS) {
     return {
       outcome: DRAW,
       message: "Both players chose scissors. It's a draw.",
     };
   }
-  if (playerMove === "Paper" && computerMove === SCISSORS) {
+  if (playerMove === PAPER && computerMove === SCISSORS) {
     return {
       outcome: LOSS,
       message: "Player chose paper and computer chose scissors. Computer wins.",
     };
   }
-  if (playerMove === SCISSORS && computerMove === ROCK) {
+  if (playerMove === 'scissors' && computerMove === 'rock') {
     return {
       outcome: LOSS,
       message: "Player chose scissors and computer chose rock. Computer wins.",
     };
   }
-  if (playerMove === "scissors" && computerMove === "paper") {
+  if (playerMove === SCISSORS && computerMove === PAPER) {
     return {
       outcome: WIN,
       message: "Player chose paper and computer chose paper. Player wins.",
